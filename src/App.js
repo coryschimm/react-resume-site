@@ -70,7 +70,7 @@ class App extends Component {
         }}
       >
         <Fade title="aaa" out={!this.state.visible} start={0}>
-          &lt;{this.state.text}&gt;
+          &lt;{this.state.text}s&gt;
         </Fade>
       </Container>
     );
