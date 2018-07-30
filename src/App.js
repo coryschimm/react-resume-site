@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled, { keyframes } from "styled-components";
+import OverView from "./OverView";
 
 const fadeIn = keyframes`
   from {
@@ -21,7 +22,7 @@ const fadeOut = keyframes`
   }
 `;
 
-const Container = styled.div`
+const SiteContainer = styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -29,50 +30,63 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Fade = styled.div`
+const ContentContainer = styled.div`
   display: inline-block;
   visibility: ${props => (props.out ? "hidden" : "visible")};
   animation: ${props => (props.out ? fadeOut : fadeIn)} 0.5s linear;
   transition: visibility 0.5s linear;
-  height: 800px;
+  height: 450px;
   width: 800px;
+  background-color: whitesmoke;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 `;
+
+const LeftContentArea = styled.div``;
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      visible: true,
-      text: "anime"
+      visible: false,
+      text: "anime",
+      view: "overview"
     };
 
     this.changeView = this.changeView.bind(this);
+    this.getView = this.getView.bind(this);
   }
 
   changeView(text) {
-    this.setState({
-      visible: false
+    this.setState(() => {
+      return { visible: true };
     });
 
     setTimeout(() => {
-      this.setState({
-        visible: true,
-        text: text
+      this.setState(() => {
+        return {
+          visible: false,
+          text: text
+        };
       });
     }, 250);
   }
 
+  getView() {
+    const te = this.state.text;
+    return <OverView />;
+  }
+
   render() {
     return (
-      <Container
+      <SiteContainer
         onClick={() => {
           this.changeView("a");
         }}
       >
-        <Fade title="aaa" out={!this.state.visible} start={0}>
-          &lt;{this.state.text}s&gt;
-        </Fade>
-      </Container>
+        <ContentContainer title="aaa" out={this.state.visible}>
+          {this.getView()}
+        </ContentContainer>
+      </SiteContainer>
     );
   }
 }
