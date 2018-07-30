@@ -72,8 +72,11 @@ class App extends Component {
   }
 
   getView() {
-    const te = this.state.text;
-    return <OverView />;
+    switch (this.state.view) {
+      case "overview":
+        return <OverView />;
+        break;
+    }
   }
 
   render() {
