@@ -11,7 +11,7 @@ class OverView extends Component {
   }
 
   render() {
-    return <div>red</div>;
+    return <div>Hiya Discord</div>;
   }
 }
 

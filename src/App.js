@@ -37,7 +37,7 @@ const ContentContainer = styled.div`
   transition: visibility 0.5s linear;
   height: 450px;
   width: 800px;
-  background-color: whitesmoke;
+  background-color: white;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 `;
 
@@ -86,7 +86,7 @@ class App extends Component {
           this.changeView("a");
         }}
       >
-        <ContentContainer title="aaa" out={this.state.visible}>
+        <ContentContainer out={this.state.visible}>
           {this.getView()}
         </ContentContainer>
       </SiteContainer>
