@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 import styled, { keyframes } from "styled-components";
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const LeftContainer = styled.div`
+  width: 50%;
+  height: 450px;
+`;
+
 class OverView extends Component {
   constructor() {
     super();
@@ -11,7 +21,16 @@ class OverView extends Component {
   }
 
   render() {
-    return <div>Hiya Discord</div>;
+    return (
+      <Container>
+        <LeftContainer>
+          left
+        </LeftContainer> 
+        <LeftContainer>
+          Right
+        </LeftContainer> 
+      </Container>
+    );
   }
 }
 

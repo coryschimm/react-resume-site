@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled, { keyframes } from "styled-components";
 import OverView from "./OverView";
+import EducationView from "./EducationView";
 
 const fadeIn = keyframes`
   from {
@@ -65,7 +66,7 @@ class App extends Component {
       this.setState(() => {
         return {
           visible: false,
-          text: text
+          view: text
         };
       });
     }, 250);
@@ -75,7 +76,9 @@ class App extends Component {
     switch (this.state.view) {
       case "overview":
         return <OverView />;
-        break;
+
+      case "education":
+        return <EducationView />;
     }
   }
 
@@ -83,7 +86,7 @@ class App extends Component {
     return (
       <SiteContainer
         onClick={() => {
-          this.changeView("a");
+          this.changeView("education");
         }}
       >
         <ContentContainer out={this.state.visible}>
