@@ -49,7 +49,6 @@ class App extends Component {
     super();
     this.state = {
       visible: false,
-      text: "anime",
       view: "overview"
     };
 

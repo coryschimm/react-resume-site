@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled, { keyframes } from "styled-components";
+import Summary from "./Summary";
 
 const Container = styled.div`
   display: flex;
@@ -24,7 +25,7 @@ class OverView extends Component {
     return (
       <Container>
         <LeftContainer>
-          left
+          <Summary />
         </LeftContainer> 
         <LeftContainer>
           Right
