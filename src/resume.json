@@ -5,10 +5,10 @@
     "email": "john@gmail.com",
     "phone": "(912) 555-4321",
     "website": "http://johndoe.com",
-    "summary": "A summary of John Doe...",
+    "summary": "A summary of John Doe. A summary of John Doe. A summary of John Doe. A summary of John Doe. A summary of John Doe. A summary of John Doe.",
     "location": {
       "addressLine1": "2712 Broadway St",
       "addressLine2": "CA 94115"
     }
-}
+  }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled, { keyframes } from "styled-components";
 import Summary from "./Summary";
+import Navigation from "./Navigation";
 
 const Container = styled.div`
   display: flex;
@@ -30,7 +31,9 @@ class OverView extends Component {
         <LeftContainer>
           <Summary canidateInfo={this.props.canidateOverview} />
         </LeftContainer>
-        <LeftContainer>Right</LeftContainer>
+        <LeftContainer>
+          <Navigation canidateInfo={this.props.canidateOverview} />
+        </LeftContainer>
       </Container>
     );
   }

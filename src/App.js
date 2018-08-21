@@ -38,7 +38,7 @@ const ContentContainer = styled.div`
   animation: ${props => (props.out ? fadeOut : fadeIn)} 0.5s linear;
   transition: visibility 0.5s linear;
   height: 450px;
-  width: 800px;
+  min-width: 800px;
   background-color: white;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 `;
