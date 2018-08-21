@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled, { keyframes } from "styled-components";
 import OverView from "./OverView";
 import EducationView from "./EducationView";
+import ResumeData from "./resume.json";
 
 const fadeIn = keyframes`
   from {
@@ -42,8 +43,6 @@ const ContentContainer = styled.div`
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 `;
 
-const LeftContentArea = styled.div``;
-
 class App extends Component {
   constructor() {
     super();
@@ -74,7 +73,7 @@ class App extends Component {
   getView() {
     switch (this.state.view) {
       case "overview":
-        return <OverView />;
+        return <OverView canidateOverview={ResumeData.basics} />;
 
       case "education":
         return <EducationView />;
@@ -84,9 +83,9 @@ class App extends Component {
   render() {
     return (
       <SiteContainer
-        onClick={() => {
-          this.changeView("education");
-        }}
+      // onClick={() => {
+      //   this.changeView("education");
+      // }}
       >
         <ContentContainer out={this.state.visible}>
           {this.getView()}

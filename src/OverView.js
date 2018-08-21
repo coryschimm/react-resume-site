@@ -10,6 +10,9 @@ const Container = styled.div`
 const LeftContainer = styled.div`
   width: 50%;
   height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 class OverView extends Component {
@@ -25,11 +28,9 @@ class OverView extends Component {
     return (
       <Container>
         <LeftContainer>
-          <Summary />
-        </LeftContainer> 
-        <LeftContainer>
-          Right
-        </LeftContainer> 
+          <Summary canidateInfo={this.props.canidateOverview} />
+        </LeftContainer>
+        <LeftContainer>Right</LeftContainer>
       </Container>
     );
   }
