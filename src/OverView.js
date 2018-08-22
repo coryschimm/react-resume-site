@@ -32,7 +32,10 @@ class OverView extends Component {
           <Summary canidateInfo={this.props.canidateOverview} />
         </LeftContainer>
         <LeftContainer>
-          <Navigation canidateInfo={this.props.canidateOverview} />
+          <Navigation
+            cbChangeView={this.props.cbChangeView}
+            canidateInfo={this.props.canidateOverview}
+          />
         </LeftContainer>
       </Container>
     );

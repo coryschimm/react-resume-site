@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import styled, { keyframes } from "styled-components";
 import OverView from "./OverView";
 import EducationView from "./EducationView";
+import SkillsView from "./SkillsView";
+import ExperienceView from "./ExperienceView";
 import ResumeData from "./resume.json";
 
 const fadeIn = keyframes`
@@ -72,11 +74,37 @@ class App extends Component {
 
   getView() {
     switch (this.state.view) {
-      case "overview":
-        return <OverView canidateOverview={ResumeData.basics} />;
-
       case "education":
-        return <EducationView />;
+        return (
+          <EducationView
+            cbChangeView={this.changeView}
+            canidateOverview={ResumeData}
+          />
+        );
+
+      case "skills":
+        return (
+          <SkillsView
+            cbChangeView={this.changeView}
+            canidateOverview={ResumeData}
+          />
+        );
+
+      case "experience":
+        return (
+          <ExperienceView
+            cbChangeView={this.changeView}
+            canidateOverview={ResumeData}
+          />
+        );
+
+      default:
+        return (
+          <OverView
+            cbChangeView={this.changeView}
+            canidateOverview={ResumeData.basics}
+          />
+        );
     }
   }
 

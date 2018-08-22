@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled, { keyframes } from "styled-components";
-import Summary from "./Summary";
 
 const Container = styled.div`
   display: flex;
@@ -12,8 +11,12 @@ const Container = styled.div`
 
 const NavButton = styled.div`
   width: 100%;
-  background-color: green;
+  border-top: 1px solid black;
   height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
   :hover {
     background-color: skyblue;
   }
@@ -22,6 +25,10 @@ const NavButton = styled.div`
 const CanidateSummary = styled.p`
   padding-left: 16px;
   width: 380px;
+`;
+
+const NavButtonContainer = styled.div`
+  margin-top: auto;
 `;
 
 class Navigation extends Component {
@@ -37,7 +44,29 @@ class Navigation extends Component {
     return (
       <Container>
         <CanidateSummary> {this.props.canidateInfo.summary} </CanidateSummary>
-        <NavButton />
+        <NavButtonContainer>
+          <NavButton
+            onClick={() => {
+              this.props.cbChangeView("experience");
+            }}
+          >
+            Experience
+          </NavButton>
+          <NavButton
+            onClick={() => {
+              this.props.cbChangeView("skills");
+            }}
+          >
+            Skills
+          </NavButton>
+          <NavButton
+            onClick={() => {
+              this.props.cbChangeView("education");
+            }}
+          >
+            Education
+          </NavButton>
+        </NavButtonContainer>
       </Container>
     );
   }
