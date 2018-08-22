@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   height: 100%;
 `;
+
+const ExperienceSection = styled.div``;
 
 class ExperienceView extends Component {
   constructor() {
@@ -15,6 +17,22 @@ class ExperienceView extends Component {
       visible: false,
       text: "anime"
     };
+
+    this.getExperience = this.getExperience.bind(this);
+  }
+
+  getExperience() {
+    return this.props.canidateExperience.map(position => {
+      return (
+        <React.Fragment>
+          <ExperienceSection>
+            {position.company + " - " + position.location}
+          </ExperienceSection>
+          <ExperienceSection>{position.position}</ExperienceSection>
+          <ExperienceSection>{position.duration}</ExperienceSection>
+        </React.Fragment>
+      );
+    });
   }
 
   render() {
@@ -24,7 +42,7 @@ class ExperienceView extends Component {
           this.props.cbChangeView("overview");
         }}
       >
-        Experience
+        {this.getExperience()}
       </Container>
     );
   }
