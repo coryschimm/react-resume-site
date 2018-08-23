@@ -78,7 +78,7 @@ class App extends Component {
         return (
           <EducationView
             cbChangeView={this.changeView}
-            canidateEducation={ResumeData.education}
+            candidateEducation={ResumeData.education}
           />
         );
 
@@ -86,7 +86,7 @@ class App extends Component {
         return (
           <SkillsView
             cbChangeView={this.changeView}
-            canidateOverview={ResumeData}
+            candidateOverview={ResumeData}
           />
         );
 
@@ -94,7 +94,7 @@ class App extends Component {
         return (
           <ExperienceView
             cbChangeView={this.changeView}
-            canidateExperience={ResumeData.work}
+            candidateExperience={ResumeData.work}
           />
         );
 
@@ -102,7 +102,7 @@ class App extends Component {
         return (
           <OverView
             cbChangeView={this.changeView}
-            canidateOverview={ResumeData.basics}
+            candidateOverview={ResumeData.basics}
           />
         );
     }

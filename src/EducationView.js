@@ -22,7 +22,7 @@ class EducationView extends Component {
   }
 
   getEducationHighlights() {
-    return this.props.canidateEducation.highlights.map(highlight => {
+    return this.props.candidateEducation.highlights.map(highlight => {
       console.log("SADASDSA", highlight);
       return <li>{highlight}</li>;
     });
@@ -37,19 +37,19 @@ class EducationView extends Component {
         }}
       >
         <EducationSection>
-          {this.props.canidateEducation.school +
+          {this.props.candidateEducation.school +
             " - " +
-            this.props.canidateEducation.location}
+            this.props.candidateEducation.location}
         </EducationSection>
         <EducationSection>
-          {this.props.canidateEducation.degree}
+          {this.props.candidateEducation.degree}
         </EducationSection>
         <EducationSection>
-          {this.props.canidateEducation.duration}
+          {this.props.candidateEducation.duration}
         </EducationSection>
         <EducationSection>
           {"Cumulative Grade Point Average: " +
-            this.props.canidateEducation.gpa}
+            this.props.candidateEducation.gpa}
         </EducationSection>
         <ul>{this.getEducationHighlights()}</ul>
       </Container>

@@ -22,7 +22,7 @@ const NavButton = styled.div`
   }
 `;
 
-const CanidateSummary = styled.p`
+const candidateSummary = styled.p`
   padding-left: 16px;
   width: 380px;
 `;
@@ -43,7 +43,10 @@ class Navigation extends Component {
   render() {
     return (
       <Container>
-        <CanidateSummary> {this.props.canidateInfo.summary} </CanidateSummary>
+        <candidateSummary>
+          {" "}
+          {this.props.candidateInfo.summary}{" "}
+        </candidateSummary>
         <NavButtonContainer>
           <NavButton
             onClick={() => {

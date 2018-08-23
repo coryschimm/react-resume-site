@@ -29,12 +29,12 @@ class OverView extends Component {
     return (
       <Container>
         <LeftContainer>
-          <Summary canidateInfo={this.props.canidateOverview} />
+          <Summary candidateInfo={this.props.candidateOverview} />
         </LeftContainer>
         <LeftContainer>
           <Navigation
             cbChangeView={this.props.cbChangeView}
-            canidateInfo={this.props.canidateOverview}
+            candidateInfo={this.props.candidateOverview}
           />
         </LeftContainer>
       </Container>

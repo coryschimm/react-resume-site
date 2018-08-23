@@ -22,7 +22,7 @@ class ExperienceView extends Component {
   }
 
   getExperience() {
-    return this.props.canidateExperience.map(position => {
+    return this.props.candidateExperience.map(position => {
       return (
         <React.Fragment>
           <ExperienceSection>

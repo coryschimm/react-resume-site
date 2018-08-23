@@ -18,19 +18,19 @@ class Summary extends Component {
   }
 
   render() {
-    console.log("canidateOverview", this.props.canidateInfo);
+    console.log("candidateOverview", this.props.candidateInfo);
     return (
       <div>
         <ProfileImage src={pic} height="250" width="250" />
-        <SummarySection>{this.props.canidateInfo.name}</SummarySection>
-        <SummarySection> {this.props.canidateInfo.email}</SummarySection>
-        <SummarySection>{this.props.canidateInfo.phone}</SummarySection>
-        <SummarySection> {this.props.canidateInfo.website}</SummarySection>
+        <SummarySection>{this.props.candidateInfo.name}</SummarySection>
+        <SummarySection> {this.props.candidateInfo.email}</SummarySection>
+        <SummarySection>{this.props.candidateInfo.phone}</SummarySection>
+        <SummarySection> {this.props.candidateInfo.website}</SummarySection>
         <SummarySection>
-          {this.props.canidateInfo.location.addressLine1}
+          {this.props.candidateInfo.location.addressLine1}
         </SummarySection>
         <SummarySection>
-          {this.props.canidateInfo.location.addressLine2}
+          {this.props.candidateInfo.location.addressLine2}
         </SummarySection>
       </div>
     );
