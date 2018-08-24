@@ -19,12 +19,33 @@ class EducationView extends Component {
     };
 
     this.getEducationHighlights = this.getEducationHighlights.bind(this);
+    this.getEducationHighlights = this.getEducationHighlights.bind(this);
   }
 
-  getEducationHighlights() {
-    return this.props.candidateEducation.highlights.map(highlight => {
+  getEducationHighlights(education) {
+    console.log("><><>", education);
+    return education.highlights.map(highlight => {
       console.log("SADASDSA", highlight);
       return <li>{highlight}</li>;
+    });
+  }
+
+  getEducationSection() {
+    return this.props.candidateEducation.map(education => {
+      console.log("EDUCATION", education);
+      return (
+        <React.Fragment>
+          <EducationSection>
+            {education.school + " - " + education.location}
+          </EducationSection>
+          <EducationSection>{education.degree}</EducationSection>
+          <EducationSection>{education.duration}</EducationSection>
+          <EducationSection>
+            {"Cumulative Grade Point Average: " + education.gpa}
+          </EducationSection>
+          <ul>{this.getEducationHighlights(education)}</ul>
+        </React.Fragment>
+      );
     });
   }
 
@@ -36,22 +57,7 @@ class EducationView extends Component {
           this.props.cbChangeView("overview");
         }}
       >
-        <EducationSection>
-          {this.props.candidateEducation.school +
-            " - " +
-            this.props.candidateEducation.location}
-        </EducationSection>
-        <EducationSection>
-          {this.props.candidateEducation.degree}
-        </EducationSection>
-        <EducationSection>
-          {this.props.candidateEducation.duration}
-        </EducationSection>
-        <EducationSection>
-          {"Cumulative Grade Point Average: " +
-            this.props.candidateEducation.gpa}
-        </EducationSection>
-        <ul>{this.getEducationHighlights()}</ul>
+        {this.getEducationSection()}
       </Container>
     );
   }

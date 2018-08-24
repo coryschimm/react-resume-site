@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  border-left: 2px solid black;
+  border-left: 1px solid black;
   width: 100%;
   height: 100%;
 `;
@@ -22,7 +22,7 @@ const NavButton = styled.div`
   }
 `;
 
-const candidateSummary = styled.p`
+const CandidateSummary = styled.p`
   padding-left: 16px;
   width: 380px;
 `;
@@ -43,10 +43,10 @@ class Navigation extends Component {
   render() {
     return (
       <Container>
-        <candidateSummary>
+        <CandidateSummary>
           {" "}
           {this.props.candidateInfo.summary}{" "}
-        </candidateSummary>
+        </CandidateSummary>
         <NavButtonContainer>
           <NavButton
             onClick={() => {

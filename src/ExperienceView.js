@@ -19,6 +19,13 @@ class ExperienceView extends Component {
     };
 
     this.getExperience = this.getExperience.bind(this);
+    this.getPositionHighlights = this.getPositionHighlights.bind(this);
+  }
+
+  getPositionHighlights(highlights) {
+    return highlights.map(highlight => {
+      return <li>{highlight}</li>;
+    });
   }
 
   getExperience() {
@@ -30,6 +37,7 @@ class ExperienceView extends Component {
           </ExperienceSection>
           <ExperienceSection>{position.position}</ExperienceSection>
           <ExperienceSection>{position.duration}</ExperienceSection>
+          <ul>{this.getPositionHighlights(position.highlights)}</ul>
         </React.Fragment>
       );
     });

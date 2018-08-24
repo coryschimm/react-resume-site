@@ -40,7 +40,8 @@ const ContentContainer = styled.div`
   animation: ${props => (props.out ? fadeOut : fadeIn)} 0.5s linear;
   transition: visibility 0.5s linear;
   height: 450px;
-  min-width: 800px;
+  width: 800px;
+  overflow: hidden;
   background-color: white;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 `;
@@ -86,7 +87,7 @@ class App extends Component {
         return (
           <SkillsView
             cbChangeView={this.changeView}
-            candidateOverview={ResumeData}
+            candidateSkills={ResumeData.skills}
           />
         );
 

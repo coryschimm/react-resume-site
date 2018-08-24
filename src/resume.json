@@ -20,12 +20,20 @@
       "highlights": ["1", "2"]
     }
   ],
-  "education": {
-    "school": "usfsm",
-    "location": "Sarasota, Florida",
-    "degree": "Bachelor of Science, Information Technology",
-    "duration": "Mar 2018 - May 2018",
-    "gpa": "3.55",
-    "highlights": ["1", "2"]
-  }
+  "skills": [
+    {
+      "skillType": "server",
+      "highlights": ["graphql", "rest"]
+    }
+  ],
+  "education": [
+    {
+      "school": "usfsm",
+      "location": "Sarasota, Florida",
+      "degree": "Bachelor of Science, Information Technology",
+      "duration": "Mar 2018 - May 2018",
+      "gpa": "3.55",
+      "highlights": ["1", "2"]
+    }
+  ]
 }
