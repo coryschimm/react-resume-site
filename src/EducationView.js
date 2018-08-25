@@ -6,9 +6,20 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding: 10px;
 `;
 
-const EducationSection = styled.div``;
+const EducationSection = styled.div`
+  padding-bottom: 10px;
+`;
+
+const HighlightList = styled.ul`
+  margin: 0;
+`;
+
+const HighlightItem = styled.li`
+  padding-bottom: 5px;
+`;
 
 class EducationView extends Component {
   constructor() {
@@ -26,7 +37,7 @@ class EducationView extends Component {
     console.log("><><>", education);
     return education.highlights.map(highlight => {
       console.log("SADASDSA", highlight);
-      return <li>{highlight}</li>;
+      return <HighlightItem>{highlight}</HighlightItem>;
     });
   }
 
@@ -43,7 +54,9 @@ class EducationView extends Component {
           <EducationSection>
             {"Cumulative Grade Point Average: " + education.gpa}
           </EducationSection>
-          <ul>{this.getEducationHighlights(education)}</ul>
+          <HighlightList>
+            {this.getEducationHighlights(education)}
+          </HighlightList>
         </React.Fragment>
       );
     });

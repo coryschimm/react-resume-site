@@ -6,16 +6,26 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding: 10px;
 `;
 
-const ExperienceSection = styled.div``;
+const ExperienceSection = styled.div`
+  padding-bottom: 10px;
+`;
+
+const HighlightList = styled.ul`
+  margin: 0;
+`;
+
+const HighlightItem = styled.li`
+  padding-bottom: 5px;
+`;
 
 class ExperienceView extends Component {
   constructor() {
     super();
     this.state = {
-      visible: false,
-      text: "anime"
+      visible: false
     };
 
     this.getExperience = this.getExperience.bind(this);
@@ -24,7 +34,7 @@ class ExperienceView extends Component {
 
   getPositionHighlights(highlights) {
     return highlights.map(highlight => {
-      return <li>{highlight}</li>;
+      return <HighlightItem>{highlight}</HighlightItem>;
     });
   }
 
@@ -37,7 +47,9 @@ class ExperienceView extends Component {
           </ExperienceSection>
           <ExperienceSection>{position.position}</ExperienceSection>
           <ExperienceSection>{position.duration}</ExperienceSection>
-          <ul>{this.getPositionHighlights(position.highlights)}</ul>
+          <HighlightList>
+            {this.getPositionHighlights(position.highlights)}
+          </HighlightList>
         </React.Fragment>
       );
     });
