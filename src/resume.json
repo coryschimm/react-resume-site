@@ -13,11 +13,14 @@
   },
   "work": [
     {
-      "company": "s2s",
+      "company": "McDonalds",
       "location": "Sarasota, Florida",
-      "position": "good worker",
+      "position": "Line Cook",
       "duration": "Mar 2018 - May 2018",
-      "highlights": ["1", "2"]
+      "highlights": [
+        "Served hundreds of customers on a daily basis",
+        "Created food to a customer's specification"
+      ]
     }
   ],
   "skills": [
