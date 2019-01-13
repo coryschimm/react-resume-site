@@ -8,5 +8,5 @@
 2. Substitute your information for the dummy information in src/resume.json
 3. Run ' yarn build' and deploy the contents of the build folder
 
-![Overview Page Screenshot](https://i.imgur.com/Ypt9KkN.png)
-![Experience Page Screenshot](https://i.imgur.com/kfWK8Bf.png)
+![Overview Page Screenshot](https://imgur.com/Sz7jP9k)
+![Experience Page Screenshot](https://imgur.com/4I4rNcW)
