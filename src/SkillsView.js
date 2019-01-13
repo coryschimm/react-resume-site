@@ -4,12 +4,22 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: 100%;
   padding: 10px;
 `;
 
-const ExperienceSection = styled.div``;
+const SkillsSection = styled.div`
+  line-height: 60px;
+`;
+
+const Back = styled.div`
+  justify-self: flex-end;
+  margin-top: auto;
+  margin-bottom: 5%;
+  height: 20px;
+  cursor: pointer;
+`;
 
 class SkillsView extends Component {
   constructor() {
@@ -29,7 +39,7 @@ class SkillsView extends Component {
       if (i === highlights.length - 1) {
         return <span>{gh}</span>;
       } else {
-        return <span>{gh + ", "}</span>;
+        return <span>{gh + ",   "}</span>;
       }
     });
   }
@@ -38,10 +48,10 @@ class SkillsView extends Component {
     return this.props.candidateSkills.map(skillsSection => {
       return (
         <React.Fragment>
-          <ExperienceSection>
+          <SkillsSection>
             {skillsSection.skillType + ": "}
             {this.listSkills(skillsSection.highlights)}
-          </ExperienceSection>
+          </SkillsSection>
         </React.Fragment>
       );
     });
@@ -55,6 +65,7 @@ class SkillsView extends Component {
         }}
       >
         {this.getSkillsSections()}
+        <Back>Back</Back>
       </Container>
     );
   }

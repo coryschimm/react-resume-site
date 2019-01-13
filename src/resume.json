@@ -1,42 +1,68 @@
 {
   "basics": {
-    "name": "John Doe",
-    "label": "Programmer",
-    "email": "john@gmail.com",
-    "phone": "(912) 555-4321",
-    "website": "http://johndoe.com",
-    "summary": "A summary of John Doe. A summary of John Doe. A summary of John Doe. A summary of John Doe. A summary of John Doe. A summary of John Doe.",
+    "name": "Cory Schimmoeller",
+    "label": "Software Engineer",
+    "email": "cory@schimmoeller.net",
+    "phone": "(567) 242-4774",
+    "website": "github.com/coryschimm",
+    "summary": "Passionate software developer with experience building enterprise applications using JavaScript and React. I wish to utilize my experience and dedication to solve difficult problems and create unique software solutions.",
     "location": {
-      "addressLine1": "2712 Broadway St",
-      "addressLine2": "CA 94115"
+      "addressLine1": "6316 2nd Street E",
+      "addressLine2": "Bradenton, Florida 34203"
     }
   },
   "work": [
     {
-      "company": "McDonalds",
+      "company": "Star2Star Communications",
       "location": "Sarasota, Florida",
-      "position": "Line Cook",
-      "duration": "Mar 2018 - May 2018",
+      "position": "Front-End Developer",
+      "duration": "May 2016 - Present",
       "highlights": [
-        "Served hundreds of customers on a daily basis",
-        "Created food to a customer's specification"
+        "Used modern web development tools to create, deploy, and maintain 4 enterprise applications over the past three years.",
+        "Built more than 50 React components for consumption internally and externally.",
+        "Participated in and contributed to Joint Application Design sessions.",
+        "Refactored existing applications from vanilla JavaScript to React for improved performance and easier maintainability.",
+        "Used Test Driven Development techniques to produce reliable-working software early and often.",
+        "Operated as a full-stack developer by using Node.js to develop a websocket proxy for our internal APIs.",
+        "Engaged in daily Agile standup meetings.",
+        "Created integrated test suites for three of our released applications using Spectron."
       ]
     }
   ],
   "skills": [
     {
-      "skillType": "server",
-      "highlights": ["graphql", "rest"]
+      "skillType": "Programming",
+      "highlights": ["JavaScript", "React", "Python"]
+    },
+    {
+      "skillType": "Web Technologies",
+      "highlights": ["HTML5", "CSS3", "Redux"]
+    },
+    {
+      "skillType": "Server Technologies",
+      "highlights": ["Node.js", "Websockets", "REST"]
+    },
+    {
+      "skillType": "Version Control",
+      "highlights": ["Git", "SVN", "Bitbucket"]
+    },
+    {
+      "skillType": "Bug Tracking",
+      "highlights": ["JITA", "Mantis"]
+    },
+    {
+      "skillType": "Testing",
+      "highlights": ["Jest", "Mocha", "Spectron", "Storybook"]
     }
   ],
   "education": [
     {
-      "school": "usfsm",
+      "school": "University of Sount Florida",
       "location": "Sarasota, Florida",
       "degree": "Bachelor of Science, Information Technology",
-      "duration": "Mar 2018 - May 2018",
-      "gpa": "3.55",
-      "highlights": ["1", "2"]
+      "duration": "Aug 2016 - May 2019",
+      "gpa": "3.75",
+      "highlights": ["Made the dean's list in Spring and Fall of 2018"]
     }
   ]
 }

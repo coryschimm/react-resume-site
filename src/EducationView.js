@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: 100%;
   padding: 10px;
 `;
@@ -19,6 +19,14 @@ const HighlightList = styled.ul`
 
 const HighlightItem = styled.li`
   padding-bottom: 5px;
+`;
+
+const Back = styled.div`
+  justify-self: flex-end;
+  margin-top: auto;
+  margin-bottom: 5%;
+  height: 20px;
+  cursor: pointer;
 `;
 
 class EducationView extends Component {
@@ -71,6 +79,7 @@ class EducationView extends Component {
         }}
       >
         {this.getEducationSection()}
+        <Back>Back</Back>
       </Container>
     );
   }
